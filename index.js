@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
@@ -6,7 +8,7 @@ const app = express();
 const port = 3000; 
 
 // API key and url from OpenWeatherMap 
-const apiKey = '3f4f9b75fed0836b864e942bd700422e'; 
+const apiKey = process.env.API_KEY;
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=imperial&q='; 
 
 app.use(express.static('public')); 
