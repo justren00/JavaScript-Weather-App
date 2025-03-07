@@ -29,10 +29,10 @@ app.post("/submit" , async (req,res) => {
         const result = response.data; 
         res.render("index.ejs", {content: result});
     } catch (error) {
-        res.status(404).send(error.message);
+        res.render("index.ejs");
     }
 })
 
 app.listen( port , () => {
     console.log(`Listeing from port ${port}`);
-})
+}) 

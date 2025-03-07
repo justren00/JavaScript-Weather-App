@@ -98,3 +98,8 @@ body {
     font-weight: 500;
     margin-top: -6px;
 }
+
+.error {
+    font-size: 18px;
+    margin-top: 40px;
+}
